@@ -25,7 +25,7 @@ const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
 
 
 export function AppRoutes() {
-    const {sizes} = useTheme();
+    const {sizes, colors} = useTheme();
 
     const iconSize = sizes[6]
 
@@ -34,7 +34,9 @@ export function AppRoutes() {
     return (
         <Navigator screenOptions={{ 
             headerShown: false ,
-            tabBarShowLabel: false
+            tabBarShowLabel: false,
+            tabBarActiveTintColor: colors.green[500],
+            tabBarInactiveTintColor: colors.gray[200]
         
         }}>
             <Screen
